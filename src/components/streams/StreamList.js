@@ -35,7 +35,10 @@ class StreamList extends React.Component {
           {this.renderAdmin(stream)}
           <i className="large middle aligned icon camera"></i>
           <div className="content">
+          {/* this path has to be used in the App.js Route path */}
+          <Link to={`/streams/${stream.id}`} className="header">
             {stream.title}
+          </Link>
             <div className="description">{stream.description}</div>
           </div>
         </div>
@@ -74,7 +77,7 @@ const mapStateToProps = (state) => {
   return {
     streams: Object.values(state.streams),
     currentUserId: state.auth.userId,
-    isSignedIn: state.auth.isSignedIn,
+    isSignedIn: state.auth.isSignedIn
   };
 };
 // export default StreamList;
