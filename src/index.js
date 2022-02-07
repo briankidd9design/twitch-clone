@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
+// const NodeMediaServer = require('node-media-server');
 
 import App from './components/App';
 import reducers from './reducers';
@@ -15,7 +16,7 @@ const store = createStore(
 
 ReactDOM.render( 
     <Provider store={store}>  
-    <App />,
+    <App />
     </Provider>,
     document.querySelector("#root")
 );
